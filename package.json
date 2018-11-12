@@ -1,0 +1,10 @@
+{
+  "name": "NetGuruAPI",
+  "version": "0.1.0",
+  "description": "Recruitment Task for NetGuru (lets check if I'm real NodeGuru! ;)",
+  "main": "index.js",
+  "repository": "https://github.com/LucasMatuszewski/BooksAPI",
+  "author": "LucasMatuszewski <lucas.matuszewski@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
