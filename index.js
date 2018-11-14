@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 // API Routes
 const movies = require('./routes/api/movies');
-// const comments = require('./routes/api/comments');
+const comments = require('./routes/api/comments');
 
 const server = express();
 
@@ -28,7 +28,7 @@ mongoose
 
 // API ROUTES:
 server.use('/movies', movies);
-// server.use('/comments', comments);
+server.use('/comments', comments);
 
 server.get('*', (req, res) => {
   res

@@ -10,23 +10,16 @@ const MovieSchema = new Schema({
   },
   year: Number,
   runtime: String,
-  genre: [String],
-  actors: [String],
+  genre: String,
+  actors: String,
   plot: String,
   country: String,
-  /* 
-  // OLD WAY TO DO key:value pairs
-  ratings: [
-    {
-      source: String,
-      value: String
-    }
-  ], */
-  // NEW WAY WITH MONGOOSE MAP:
-  ratings: {
-    type: Map, // 'ratings' is a key/value store for string keys
-    of: String // Values must be strings
-  },
+  ratings: [Object],
+  // Other possible Schema with MONGOOSE MAP:
+  // ratings: {
+  //   type: Map, // 'ratings' is a key/value store for string keys
+  //   of: String // Values must be strings
+  // },
   imdbRating: Number,
   imdbID: String,
   comments: [

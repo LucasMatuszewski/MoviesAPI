@@ -17,9 +17,10 @@ Recruitment Task for NetGuru (lets check if I'm a real NodeGuru! ;)
 2. Clone this repo: `clone git@github.com:LucasMatuszewski/MoviesAPI.git`
 3. Enter app's folder and install it: `cd MoviesAPI && npm install`
 4. Start this app locally: `npm start` and open it on http://localhost:3000
+5. To manually test POST Routes you can use Postman.
 
 ## Reasoning behind used tools:
 1. __Express__ - small and fast framework, good enough for API (__Restify__ could be better, but Express is more popular === it's easier to find a developer to maintain your App)
 2. __MongoDB__ - it's easy to build and understand a json API when your DB follow similar structure of data. In this basic Movies API we don't need any joints / relations, so noSQL DB should be more effective. I assume that it's not a big scale app with tons of comments, so I save comments embedded in Movies collection, and limit number of characters.
-3. __Jest__ - I also use React.js, so I just like Jest ;)
-4. __Postman__ - for fast tests of API on development.
+3. __Jest__ - I like React.js, so I just like Jest ;)
+4. __Postman__ - for manual tests of API.

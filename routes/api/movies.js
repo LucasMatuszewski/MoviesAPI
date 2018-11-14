@@ -40,22 +40,23 @@ router.post('/', (req, res) => {
     .get(apiUrl)
     .then(response => {
       const newMovie = new Movies({
-        title: req.body.title,
+        title: response.data.Title,
         year: response.data.Year,
         runtime: response.data.Runtime,
-        genre: ['test', 'test2'],
-        actors: ['test', 'test2'],
+        genre: response.data.Genre,
+        actors: response.data.Actors,
         plot: response.data.Plot,
         country: response.data.Country,
-        // OLD WAY for key/value pairs:
-        // ratings: [{ source: 'test', values: '80%' }],
-        // NEW WAY WITH MONGOOSE MAPS:
-        ratings: {
-          'Rotten Tomatoes': '54%'
-        },
+        ratings: response.data.Ratings,
+        // Other schema with MONGOOSE MAPS:
+        // ratings: {
+        //   rottenTomatoes: "54%",
+        //   xxx: "10/10"
+        // }
         imdbRating: response.data.imdbRating,
         imdbID: response.data.imdbID
       });
+      // Save Movie to DB and send Json response
       newMovie
         .save()
         .then(movie => res.json(movie))
