@@ -6,11 +6,11 @@ Recruitment Task for NetGuru (lets check if I'm a real NodeGuru! ;)
 2. Internet connection (this app use online MongoDB on mLab)
 
 ## URL to test this API online:
-...herokuapp.com
+http://movie-a.herokuapp.com/
 
 > for nice view I recommend Google Extension:
 > https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc
-> Or we can use pretty-printing on `JSON.stringify(obj, null, 2)` to have spacing = 2 (but I won't do it on Production)
+> I could use pretty-printing eg. on `JSON.stringify(obj, null, 2)` to have spacing = 2, but I won't do it on "Production" ;)
 
 ## Setup instructions:
 1. In your console/terminal get to your preferred folder for this app.
@@ -18,6 +18,14 @@ Recruitment Task for NetGuru (lets check if I'm a real NodeGuru! ;)
 3. Enter app's folder and install it: `cd MoviesAPI && npm install`
 4. Start this app locally: `npm start` and open it on http://localhost:3000
 5. To manually test POST Routes you can use Postman.
+
+## Routes:
+- http://movie-a.herokuapp.com/movies - GET all movies
+- http://movie-a.herokuapp.com/movies - POST - add new movie (var: title)
+- http://movie-a.herokuapp.com/comments - GET all comments
+- http://movie-a.herokuapp.com/comments/movieID - GET comments from one movie
+- http://movie-a.herokuapp.com/comments - POST add new comment (var: movieId, text, userName)
+
 
 ## Reasoning behind used tools:
 1. __Express__ - small and fast framework, good enough for API (__Restify__ could be better, but Express is more popular === it's easier to find a developer to maintain your App)
