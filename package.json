@@ -13,7 +13,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles --watch"
   },
   "dependencies": {
     "axios": "^0.18.0",
